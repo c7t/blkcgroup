@@ -196,7 +196,7 @@ class Container(object):
 
   def empty_container(self, container_path):
     lines = open(os.path.join(container_path, 'tasks')).read().split('\n')
-    root_tasks = open(os.path.join(CGROUP_MNT, 'tasks'), 'wb')
+    root_tasks = open(os.path.join(self.CGROUP_MNT, 'tasks'), 'wb')
     for line in lines:
       root_tasks.write(line)
 
